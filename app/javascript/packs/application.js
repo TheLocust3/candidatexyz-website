@@ -37,24 +37,22 @@ class Base extends React.Component {
     render() {
         return (
             <Provider store={store}>
-                <div>
-                    <Router history={history}>
-                        <div>
-                            <Navbar />
+                <Router history={history}>
+                    <div>
+                        <Navbar />
 
-                            <Route component={ScrollToTop} />
+                        <Route component={ScrollToTop} />
 
-                            <Switch>
-                                <Route exact path='/' component={Index} />
-                                <Route exact path='/home' component={Index} />
-                                <Route exact path='/about' component={About} />
-                                <Route exact path='/privacy' component={Privacy} />
-                            </Switch>
+                        <Switch>
+                            <Route exact path='/' component={Index} />
+                            <Route exact path='/home' component={Index} />
+                            <Route exact path='/about' component={About} />
+                            <Route exact path='/privacy' component={Privacy} />
+                        </Switch>
 
-                            <Footer />
-                        </div>
-                    </Router>
-                </div>
+                        <Footer />
+                    </div>
+                </Router>
             </Provider>
         );
     }

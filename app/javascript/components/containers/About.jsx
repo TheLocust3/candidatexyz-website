@@ -3,6 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { setInvertedNavbar, setFloatingNavbar } from '../actions/global-actions';
+import MDCAutoInit from '../components/common/MDCAutoInit';
 
 class About extends React.Component {
 
@@ -15,6 +16,8 @@ class About extends React.Component {
         return (
             <div className='content'>
                 <h1 className='mdc-typography--display3'>About</h1>
+
+                <MDCAutoInit />
             </div>
         );
     }

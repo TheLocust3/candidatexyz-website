@@ -4,6 +4,9 @@ import { connect } from 'react-redux';
 import { Parallax, Background } from 'react-parallax';
 
 import { setInvertedNavbar, setFloatingNavbar } from '../actions/global-actions';
+import MDCAutoInit from '../components/common/MDCAutoInit';
+
+import SignUpPanel from '../components/panels/SignUpPanel';
 
 class Index extends React.Component {
 
@@ -25,6 +28,10 @@ class Index extends React.Component {
                         <div className='mdc-typography--display1 header-text-subtitle'>Democratizing democracy.</div>
                     </div>
                 </Parallax>
+
+                <SignUpPanel />
+
+                <MDCAutoInit />
             </div>
         );
     }

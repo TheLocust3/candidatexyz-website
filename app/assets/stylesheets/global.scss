@@ -8,8 +8,20 @@ body {
 }
 
 .content {
+    position: relative;
     margin-left: 5%;
     margin-right: 5%;
+    margin-bottom: 7.5vh;
+}
+
+.splitscreen1 {
+    display: inline-block;
+    width: 50%;
+}
+
+.splitscreen2 {
+    display: inline-block;
+    width: 50%;
 }
 
 .header-text {
