@@ -20,7 +20,10 @@ class Index extends React.Component {
                         <img src='https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fd2v9y0dukr6mq2.cloudfront.net%2Fvideo%2Fthumbnail%2FRfeyEzE%2Frandom-lines-purple-geometric-shapes-background_ryp-ysybl_thumbnail-full01.png&f=1' style={{ width: '100%', height: '100vh', objectFit: 'cover' }} />
                     </Background>
 
-                    <h1 className='mdc-typography--display4 header-text'>candidateXYZ</h1>
+                    <div className='header-text'>
+                        <div className='mdc-typography--display4'>candidateXYZ</div>
+                        <div className='mdc-typography--display1 header-text-subtitle'>Democratizing democracy.</div>
+                    </div>
                 </Parallax>
             </div>
         );
