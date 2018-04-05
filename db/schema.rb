@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20180405174442) do
   create_table "sign_ups", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
     t.string "email"
     t.string "zipcode"
+    t.string "name"
     t.text "reason"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -22,11 +22,11 @@ let SignUpApi = {
         });
     },
 
-    create(email, reason, zipcode) {
+    create(email, reason, zipcode, name) {
         return new Promise((resolve, reject) => {
             $.ajax('/api/sign_ups', {
                 type: 'post',
-                data: { email: email, reason: reason, zipcode: zipcode },
+                data: { email: email, reason: reason, zipcode: zipcode, name: name },
                 success: resolve,
                 error: reject
             });

@@ -10,7 +10,7 @@ const initialState = {
 
 export function signUpReducer(state = initialState, action) {
     switch (action.type) {
-        case SignUpActions.RECEIVE_ALL_SIGN_UPS:
+        case SignUpActions.REQUEST_ALL_SIGN_UPS:
         case SignUpActions.REQUEST_SIGN_UP:
             return Object.assign({}, state, {
                 isReady: false

@@ -29,7 +29,7 @@ class Api::SignUpsController < Api::ApiController
 
     private
     def create_params(params)
-        params.permit(:email, :reason, :zipcode)
+        params.permit(:email, :reason, :zipcode, :name)
     end
   end
   

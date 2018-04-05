@@ -1,17 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux';
+
+import { setInvertedNavbar, setFloatingNavbar } from '../../actions/global-actions';
+import MDCAutoInit from '../../components/common/MDCAutoInit';
 
 import SignInForm from '../../components/users/SignInForm';
 
-export default class SignInContainer extends React.Component {
+class SignInContainer extends React.Component {
+
+    componentWillMount() {
+        this.props.dispatch(setInvertedNavbar(true));
+        this.props.dispatch(setFloatingNavbar(false));
+    }
 
     render() {
         return (
-            <div>
-                <SignInForm redirectUrl="/" /><br />
-                <Link to="/sign_up">Sign up</Link><br />
-                <Link to="/forgot_password">Forgot your password?</Link>
+            <div className='content sign-in-form'>
+                <div className='mdc-typography--display3'>Sign In</div><br />
+
+                <SignInForm redirectUrl='/admin' /><br />
+
+                <MDCAutoInit />
             </div>
         );
     }
 }
+
+export default connect()(SignInContainer);

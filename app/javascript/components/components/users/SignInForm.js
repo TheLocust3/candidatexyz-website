@@ -9,7 +9,7 @@ export default class SignInForm extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = { email: null, password: null, rememberMe: false, error: "" };
+        this.state = { email: null, password: null, rememberMe: false, error: '' };
     }
 
     handleChange(event) {
@@ -49,9 +49,17 @@ export default class SignInForm extends React.Component {
     renderInputs() {
         return (
             <div>
-                Email:&nbsp;<input type="email" name="email" onChange={this.handleChange.bind(this)} /><br /><br />
-                Password:&nbsp;<input type="password" name="password" onChange={this.handleChange.bind(this)} /><br /><br />
-                Remember Me:&nbsp;<input type="checkbox" name="rememberMe" onChange={this.handleCheckbox.bind(this)} />
+                <div className='mdc-text-field' data-mdc-auto-init='MDCTextField' style={{ width: '100%' }}>
+                    <input type='email' name='email' className='mdc-text-field__input' onChange={this.handleChange.bind(this)} />
+                    <label className='mdc-floating-label'>Email</label>
+                    <div className='mdc-line-ripple' />
+                </div>
+
+                <div className='mdc-text-field' data-mdc-auto-init='MDCTextField' style={{ width: '100%' }}>
+                    <input type='password' name='password' className='mdc-text-field__input' onChange={this.handleChange.bind(this)} />
+                    <label className='mdc-floating-label'>Password</label>
+                    <div className='mdc-line-ripple' />
+                </div>
             </div>
         );
     }
@@ -59,10 +67,9 @@ export default class SignInForm extends React.Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit.bind(this)}>
-                {this.renderInputs()}
-                <input type="submit" style={{visibility: 'hidden'}} /><br />
+                {this.renderInputs()}<br />
 
-                <button type="submit">Sign In</button>
+                <button className='mdc-button mdc-button--raised' data-mdc-auto-init='MDCRipple'>Sign In</button>
                 {this.renderError()}
             </form>
         );

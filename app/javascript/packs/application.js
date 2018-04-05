@@ -9,9 +9,12 @@ import thunkMiddleware from 'redux-thunk';
 import reducer from '../components/reducers/root-reducer';
 import { history } from '../constants';
 
+import AdminRoutes from '../AdminRoutes';
+
 import Navbar from '../components/components/common/Navbar';
 import Footer from '../components/components/common/Footer';
 
+import SignInContainer from '../components/containers/users/SignInContainer';
 import Index from '../components/containers/Index';
 import About from '../components/containers/About';
 import Privacy from '../components/containers/Privacy';
@@ -48,6 +51,10 @@ class Base extends React.Component {
                             <Route exact path='/home' component={Index} />
                             <Route exact path='/about' component={About} />
                             <Route exact path='/privacy' component={Privacy} />
+
+                            <Route exact path='/sign-in' component={SignInContainer} />
+
+                            <AdminRoutes />
                         </Switch>
 
                         <Footer />

@@ -18,7 +18,7 @@ export function userReducer(state = initialState, action) {
         case UserActions.RECEIVE_CURRENT_USER:
             return Object.assign({}, state, {
                 isReady: true,
-                user: action.data
+                currentUser: action.data
             });
         default:
             return state;
