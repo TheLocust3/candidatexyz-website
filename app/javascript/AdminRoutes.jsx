@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { fetchCurrentUser } from './components/actions/user-actions';
 
 import AdminOverview from './components/containers/admin/AdminOverview';
+import ViewSignUp from './components/containers/admin/ViewSignUp';
 
 class AdminRoutes extends React.Component {
 
@@ -19,6 +20,7 @@ class AdminRoutes extends React.Component {
         return (
             <div>
                 <Route exact path='/admin' component={AdminOverview} />
+                <Route exact path='/admin/sign-ups/:id' component={ViewSignUp} />
             </div>
         );
     }

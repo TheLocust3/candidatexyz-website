@@ -3,26 +3,25 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux';
 
 import { setInvertedNavbar, setFloatingNavbar } from '../../actions/global-actions';
-import { fetchAllSignUps } from '../../actions/sign-up-actions';
+import { fetchSignUp } from '../../actions/sign-up-actions';
 import MDCAutoInit from '../../components/common/MDCAutoInit';
 
-import SignUpsList from '../../components/admin/SignUpsList';
+import ShowSignUp from '../../components/admin/ShowSignUp';
 
-class AdminOverview extends React.Component {
+class ViewSignUp extends React.Component {
 
     componentWillMount() {
         this.props.dispatch(setInvertedNavbar(true));
         this.props.dispatch(setFloatingNavbar(false));
-        this.props.dispatch(fetchAllSignUps());
+        this.props.dispatch(fetchSignUp(this.props.match.params.id));
     }
 
     render() {
         return (
             <div className='content'>
-                <div className='mdc-typography--display3'>Admin Overview</div><br /><br />
+                <div className='mdc-typography--display3'>Show Sign Up</div><br />
 
-                <div className='mdc-typography--display1'>Sign Up List</div>
-                <SignUpsList signUps={this.props.signUps} />
+                <ShowSignUp signUp={this.props.signUp} />
 
                 <MDCAutoInit />
             </div>
@@ -32,8 +31,8 @@ class AdminOverview extends React.Component {
 
 function mapStateToProps(state) {
     return {
-        signUps: state.signUps.signUps
+        signUp: state.signUps.signUp
     };
 }
 
-export default connect(mapStateToProps)(AdminOverview);
+export default connect(mapStateToProps)(ViewSignUp);

@@ -32,7 +32,7 @@ class SignUpsList extends React.Component {
 
     render() {
         return (
-            <div className='content'>
+            <div>
                 {this.renderSignUpsList()}
             </div>
         );
