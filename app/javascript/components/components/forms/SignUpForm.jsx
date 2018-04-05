@@ -8,7 +8,7 @@ class SignUpForm extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = { email: '', reason: '' };
+        this.state = { email: '', reason: '', zipcode: '' };
     }
 
     handleChange(event) {
@@ -20,7 +20,7 @@ class SignUpForm extends React.Component {
     handleSubmit(event) {
         event.preventDefault();
 
-        SignUpApi.create(this.state.email, this.state.reason).then(() => {
+        SignUpApi.create(this.state.email, this.state.reason, this.state.zipcode).then(() => {
             location.reload();
         })
     }
@@ -28,9 +28,15 @@ class SignUpForm extends React.Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit.bind(this)}>
-                <div className='mdc-text-field' data-mdc-auto-init='MDCTextField' style={{ width: '100%' }}>
+                <div className='mdc-text-field' data-mdc-auto-init='MDCTextField' style={{ width: '60%', marginRight: '5%' }}>
                     <input type='email' name='email' className='mdc-text-field__input' onChange={this.handleChange.bind(this)} required />
                     <label className='mdc-floating-label'>Email</label>
+                    <div className='mdc-line-ripple' />
+                </div>
+
+                <div className='mdc-text-field' data-mdc-auto-init='MDCTextField' style={{ width: '35%' }}>
+                    <input type='text' name='zipcode' className='mdc-text-field__input' onChange={this.handleChange.bind(this)} required />
+                    <label className='mdc-floating-label'>Zipcode</label>
                     <div className='mdc-line-ripple' />
                 </div>
 
