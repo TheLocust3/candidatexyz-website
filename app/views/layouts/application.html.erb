@@ -3,6 +3,15 @@
   <head>
     <title>CandidateXYZ</title>
     <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Saira+Condensed:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <link type="text/css" href="/material-components-web.min.css" rel="stylesheet" />
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
   </head>
@@ -12,7 +21,6 @@
 
     <%= yield %>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <script src="/material-components-web.min.js"></script>
   </body>
 </html>
