@@ -1,4 +1,6 @@
 # candidateXYZ Website
+- Privacy
+- About
 
 ### Feature Todo
 - 

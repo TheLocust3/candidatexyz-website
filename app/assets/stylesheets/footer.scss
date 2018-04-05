@@ -1,0 +1,39 @@
+.footer {
+    height: 20vh;
+    padding-left: 25%;
+    padding-right: 25%;
+
+    background-color: #cccccc;
+    text-align: center;
+}
+
+.footer-icon {
+    margin: 5% 3%;
+
+    color: black;
+}
+
+.footer-icon:hover {
+    color: #262626;
+}
+
+.footer-link {
+    margin-left: 3%;
+    margin-right: 3%;
+    padding: 1%;
+
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.footer-link:hover {
+    color: #262626;
+}
+
+.footer-disclaimer {
+    margin-top: 3%;
+    color: black;
+}

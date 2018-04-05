@@ -3,7 +3,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Parallax, Background } from 'react-parallax';
 
+import { setInvertedNavbar, setFloatingNavbar } from '../actions/global-actions';
+
 class Index extends React.Component {
+
+    componentWillMount() {
+        this.props.dispatch(setInvertedNavbar(false));
+        this.props.dispatch(setFloatingNavbar(true));
+    }
 
     render() {
         return (

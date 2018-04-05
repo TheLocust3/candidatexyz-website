@@ -10,8 +10,11 @@ import reducer from '../components/reducers/root-reducer';
 import { history } from '../constants';
 
 import Navbar from '../components/components/common/Navbar';
+import Footer from '../components/components/common/Footer';
 
 import Index from '../components/containers/Index';
+import About from '../components/containers/About';
+import Privacy from '../components/containers/Privacy';
 
 $.ajaxSetup({
     headers: {
@@ -43,7 +46,12 @@ class Base extends React.Component {
 
                             <Switch>
                                 <Route exact path='/' component={Index} />
+                                <Route exact path='/home' component={Index} />
+                                <Route exact path='/about' component={About} />
+                                <Route exact path='/privacy' component={Privacy} />
                             </Switch>
+
+                            <Footer />
                         </div>
                     </Router>
                 </div>
