@@ -1,0 +1,52 @@
+.website-panel {
+    position: relative;
+    height: 50vh;
+}
+
+.website-panel .splitscreen1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 60%;
+    margin-top: 15vh;
+
+    text-align: center;
+}
+
+.website-panel .splitscreen2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 40%;
+}
+
+.website-panel .website-blurb {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.website-panel .website-image {
+    width: 100%;
+    height: auto;
+    margin-top: 10vh;
+}
+
+.website-tri-screen {
+    margin-left: 10%;
+    margin-right: 10%;
+
+    text-align: center;
+}
+
+.website-tri-screen .tri-screen {
+    margin-top: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.website-tri-screen-image {
+    width: 15%;
+    height: auto;
+}
