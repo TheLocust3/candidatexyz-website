@@ -42,13 +42,7 @@ class Base extends React.Component {
                             <Route component={ScrollToTop} />
 
                             <Switch>
-                                <Route exact path="/" component={Index} />
-                                <Route exact path="/sign_in" component={SignInContainer} />
-                                <Route exact path="/sign_up" component={SignUpContainer} />
-                                <Route exact path="/forgot_password" component={ForgotPasswordContainer} />
-                                <Route exact path="/reset_password" component={ResetPasswordContainer} />
-                                <Route exact path="/users/edit" component={EditUserContainer} />
-
+                                <Route exact path='/' component={Index} />
                             </Switch>
                         </div>
                     </Router>
