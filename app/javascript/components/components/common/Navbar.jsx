@@ -1,16 +1,19 @@
+import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
+import { history } from '../../../constants';
+
 class Navbar extends React.Component {
 
-    onClickHome() {
-        console.log('home');
-    }
-
     onClickSignUp() {
-        console.log('sign up');
+        history.push('/home');
+
+        $('html, body').animate({
+            scrollTop: $(window).height() * 2 // TODO: find better way to do this
+        }, 1000);
     }
 
     render() {
@@ -19,13 +22,11 @@ class Navbar extends React.Component {
 
         return (
             <div className={`navbar ${invertedNavbar} ${floatingNavbar}`}>
-                <Link className='navbar-link' to='/home' onClick={this.onClickHome.bind(this)}>Home</Link>
+                <Link className='navbar-link' to='/home'>Home</Link>
 
-                <Link to='/home' onClick={this.onClickHome.bind(this)}>
-                    <button className='mdc-button mdc-button--raised navbar-button' onClick={this.onClickSignUp.bind(this)}>
-                        Sign up
-                    </button>
-                </Link>
+                <button className='mdc-button mdc-button--raised navbar-button' onClick={this.onClickSignUp.bind(this)}>
+                    Sign up
+                </button>
             </div>
         );
     }
