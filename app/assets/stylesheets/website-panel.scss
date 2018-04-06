@@ -50,11 +50,15 @@
 .website-panel .website-image {
     position: relative;
     width: 100%;
-    height: auto;
+    max-height: 100%;
     margin-top: 5%;
 
+    object-fit: cover;
+    object-position: 0 0;
+
     @media (max-width: $mobile-width) {
-        width: 100%;
+        max-height: 75%;
+        margin-top: 25vh;
     }
 }
 
@@ -66,9 +70,14 @@
 }
 
 .website-tri-screen .tri-screen {
+    width: 45%;
     margin-top: 10vh;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 1%;
+    margin-right: 1%;
+
+    @media (max-width: $mobile-width) {
+        width: 100%;
+    }
 }
 
 .website-tri-screen-image {

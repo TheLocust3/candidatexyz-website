@@ -21,7 +21,7 @@ class Index extends React.Component {
             <div>
                 <Parallax strength={300} style={{ height: '100vh' }} bgStyle={{ width: '100%' }}>
                     <Background>
-                        <img src='https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fd2v9y0dukr6mq2.cloudfront.net%2Fvideo%2Fthumbnail%2FRfeyEzE%2Frandom-lines-purple-geometric-shapes-background_ryp-ysybl_thumbnail-full01.png&f=1' style={{ width: '100%', height: '100vh', objectFit: 'cover' }} />
+                        <img src='/splash.jpeg' style={{ width: '100%', height: '100vh', objectFit: 'cover' }} />
                     </Background>
 
                     <div className='header-text'>

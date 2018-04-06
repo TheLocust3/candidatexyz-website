@@ -22,28 +22,28 @@ class WebsitePanel extends React.Component {
                 <div className='website-tri-screen'>
                     <div className='tri-screen'>
                         <img className='website-tri-screen-image' src='https://d3n8a8pro7vhmx.cloudfront.net/3dna/pages/43095/attachments/original/1506608484/rfo-icon.png?1506608484' />
-                        <div className='mdc-typography--headline'><b>Run for Office</b></div>
+                        <div className='mdc-typography--headline'><b>Create a Beautiful Website</b></div>
 
                         <div>
-                            Search the first free and public database of all elected offices in the U.S.
+                            Easily create a website and allow your staff to update it with ease.
                         </div>
                     </div>
 
                     <div className='tri-screen'>
                         <img className='website-tri-screen-image' src='https://d3n8a8pro7vhmx.cloudfront.net/3dna/pages/43095/attachments/original/1506608484/rfo-icon.png?1506608484' />
-                        <div className='mdc-typography--headline'><b>Run for Office</b></div>
+                        <div className='mdc-typography--headline'><b>Manage your Email Lists</b></div>
 
                         <div>
-                            Search the first free and public database of all elected offices in the U.S.
+                            Voters can sign up on your website and you can easily send emails to all of them.
                         </div>
                     </div>
 
                     <div className='tri-screen'>
                         <img className='website-tri-screen-image' src='https://d3n8a8pro7vhmx.cloudfront.net/3dna/pages/43095/attachments/original/1506608484/rfo-icon.png?1506608484' />
-                        <div className='mdc-typography--headline'><b>Run for Office</b></div>
+                        <div className='mdc-typography--headline'><b>Organize your Volunteers</b></div>
 
                         <div>
-                            Search the first free and public database of all elected offices in the U.S.
+                            Mobilize volunteers who have signed up on your website.
                         </div>
                     </div>
                 </div>
