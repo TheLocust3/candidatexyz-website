@@ -1,6 +1,16 @@
+@import 'global';
+
 .website-panel {
     position: relative;
-    height: 50vh;
+    height: 40vh;
+
+    @media (max-width: $mobile-width) {
+        height: 70vh;
+        margin-top: 20vh;
+
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }
 
 .website-panel .splitscreen1 {
@@ -9,9 +19,14 @@
     left: 0;
     height: 100%;
     width: 60%;
-    margin-top: 15vh;
+    margin-top: 10vh;
 
     text-align: center;
+
+    @media (max-width: $mobile-width) {
+        position: relative;
+        width: 100%;
+    }
 }
 
 .website-panel .splitscreen2 {
@@ -20,6 +35,11 @@
     right: 0;
     height: 100%;
     width: 40%;
+
+    @media (max-width: $mobile-width) {
+        position: relative;
+        width: 100%;
+    }
 }
 
 .website-panel .website-blurb {
@@ -30,7 +50,13 @@
 .website-panel .website-image {
     width: 100%;
     height: auto;
-    margin-top: 10vh;
+    margin-top: 5vh;
+
+    @media (max-width: $mobile-width) {
+        width: 100%;
+        height: 30vh;
+        object-fit: cover;
+    }
 }
 
 .website-tri-screen {
@@ -41,7 +67,7 @@
 }
 
 .website-tri-screen .tri-screen {
-    margin-top: 15%;
+    margin-top: 10vh;
     margin-left: 5%;
     margin-right: 5%;
 }

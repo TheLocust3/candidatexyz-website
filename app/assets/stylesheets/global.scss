@@ -1,3 +1,5 @@
+$mobile-width: 768px;
+
 body {
     margin: 0;
     padding: 0;
@@ -23,16 +25,28 @@ body {
 .splitscreen1 {
     display: inline-block;
     width: 50%;
+
+    @media (max-width: $mobile-width) {
+        width: 100%;
+    }
 }
 
 .splitscreen2 {
     display: inline-block;
     width: 50%;
+
+    @media (max-width: $mobile-width) {
+        width: 100%;
+    }
 }
 
 .tri-screen {
     display: inline-block;
-    width: 33.33%
+    width: 33.33%;
+
+    @media (max-width: $mobile-width) {
+        width: 100%;
+    }
 }
 
 .header-text {
@@ -42,7 +56,19 @@ body {
     color: white;
 }
 
+.header-text .mdc-typography--display4 {
+    @media (max-width: $mobile-width) {
+        font-size: 48px;
+    }
+}
+
 .header-text-subtitle {
     margin-top: 2%;
     margin-left: 5%;
+
+    @media (max-width: $mobile-width) {
+        margin-top: 0;
+        margin-left: 4%;
+        font-size: 24px;
+    }
 }
