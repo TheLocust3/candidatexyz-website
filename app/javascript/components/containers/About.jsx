@@ -15,7 +15,7 @@ class About extends React.Component {
     render() {
         return (
             <div className='content'>
-                <h1 className='mdc-typography--display3'>About</h1>
+                <h1 className='mdc-typography--display3'>About candidateXYZ</h1>
 
                 <MDCAutoInit />
             </div>

@@ -48,14 +48,13 @@
 }
 
 .website-panel .website-image {
+    position: relative;
     width: 100%;
     height: auto;
-    margin-top: 5vh;
+    margin-top: 5%;
 
     @media (max-width: $mobile-width) {
         width: 100%;
-        height: 30vh;
-        object-fit: cover;
     }
 }
 
