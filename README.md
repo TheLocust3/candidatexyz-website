@@ -1,12 +1,12 @@
 # candidateXYZ Website
 
 ### Feature Todo
-- Privacy
 - About
 - Content
 
 ### Misc Todo
 - Mobile view still a bit shit
+- Check over privacy policy
 
 ### Bugs
 - 
