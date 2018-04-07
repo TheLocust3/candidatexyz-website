@@ -1,3 +1,5 @@
+@import 'theme';
+
 .footer {
     min-height: 20vh;
     padding-left: 15%;
@@ -14,7 +16,7 @@
 }
 
 .footer-icon:hover {
-    color: #262626;
+    color: $purple-highlight;
 }
 
 .footer-link {
@@ -30,7 +32,7 @@
 
 
 .footer-link:hover {
-    color: #262626;
+    color: $purple-highlight;
 }
 
 .footer-disclaimer {

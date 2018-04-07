@@ -1,0 +1,12 @@
+$purple-primary: #470a66;
+$purple-highlight: #590c7f;
+$mdc-theme-primary: $purple-primary;
+
+.mdc-button {
+    height: 45px;
+
+    font-size: 20px;
+    text-transform: none;
+}
+
+@import '@material/theme/mdc-theme';

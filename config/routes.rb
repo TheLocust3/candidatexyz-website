@@ -23,5 +23,5 @@ Rails.application.routes.draw do
     resources :sign_ups
   end
 
-  get '*path', to: 'root#index', :constraints => lambda{|req| req.path !~ /\.(min.css|min.js|jpeg)$/ }
+  get '*path', to: 'root#index', :constraints => lambda{|req| req.path !~ /\.(min.css|min.js|jpeg|png)$/ }
 end

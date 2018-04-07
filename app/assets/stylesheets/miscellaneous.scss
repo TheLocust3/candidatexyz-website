@@ -1,3 +1,41 @@
+@import 'global';
+@import 'theme';
+
 .sign-in-form {
     width: 40%;
+}
+
+.team-profile {
+    position: relative;
+    width: 30vh;
+    height: 40vh;
+
+    color: white;
+    background-color: $purple-primary;
+
+    @media (max-width: $mobile-width) {
+        width: 100%;
+        height: 80vh;
+    }
+}
+
+.team-image {
+    width: 100%;
+    height: 30vh;
+
+    object-fit: cover;
+    object-position: 0 0;
+
+    @media (max-width: $mobile-width) {
+        width: 100%;
+        height: 70vh;
+    }
+}
+
+.team-subtitle {
+    position: absolute;
+    bottom: 2%;
+    width: 100%;
+
+    text-align: center;
 }
