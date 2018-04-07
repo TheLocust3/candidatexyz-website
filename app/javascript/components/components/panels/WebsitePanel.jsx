@@ -9,8 +9,8 @@ class WebsitePanel extends React.Component {
                 <div className='website-panel'>
                     <div className='splitscreen1'>
                         <div className='mdc-typography--display1'><b>Running for office should be easy</b></div><br />
-                        <div className='mdc-typography--headline'>We'll handle the campaign.</div>
-                        <div className='mdc-typography--headline'>You'll handle the running.</div><br />
+                        <div className='mdc-typography--headline'>Focus on the important things.</div>
+                        <div className='mdc-typography--headline'>We'll handle the campaign.</div><br />
                         <div className='mdc-typography--subtitle1 website-blurb'>Create a beautiful website, manage your email lists, organize your volunteers, and more. All at the click of a button.</div>
                     </div>
 
