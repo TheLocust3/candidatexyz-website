@@ -18,13 +18,13 @@ class About extends React.Component {
                 <h1 className='mdc-typography--display3'>About candidateXYZ</h1>
 
                 <p>
-                    We at candidateXYZ believe that everyone should be able to run for political office, regardless of their experience and financial situation. The best way to fight our hyper-partisan climate is with a diversity of ideas and convincing the next generation to step up.
+                    We at candidateXYZ believe that everyone should be able to run for political office, regardless of their experience or financial situation. We strive to create a diversity of ideas in our elected officials to combat the vicious partisanship plaguing our national politics.
                 </p>
 
                 <h1 className='mdc-typography--display1'>Company</h1>
 
                 <p>
-                    candidateXYZ was founded by Jake Kinsella at the end of his senior year of high school. He founded the company when he noticed how few politicians actually had websites and how difficult it was to run for office. With this in mind, candidateXYZ was born. We work with poltiicians to create websites for their campaigns and run their technological operations.
+                    At the end of his senior year of high school, Jake Kinsella founded candidateXYZ. He founded the company when he noticed how few politicians actually had websites and how difficult it was to run for office. With this in mind, candidateXYZ was born. Currently, we work with poltiicians to create websites for their campaigns and run their technological operations.
                 </p>
                 
                 <h1 className='mdc-typography--display1'>Team</h1>

@@ -11,7 +11,7 @@ class SignUpPanel extends React.Component {
                 <div className='mdc-typography--display2'>Join Us</div>
 
                 <div className='splitscreen1'>
-                    Sign up to help us test our software on your campaign. We'll provide the website and manage your campaign's technical work. You'll do the running.
+                    Sign up to show your interest in candidateXYZ. We'll contact you asking you to help us test our software on your campaign. We'll provide a slick website and manage your campaign's technical work. You'll focus on the running.
                 </div>
 
                 <div className='splitscreen2'>

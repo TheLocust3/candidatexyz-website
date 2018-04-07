@@ -1,44 +1,37 @@
 @import 'global';
 
 .website-panel {
-    position: relative;
-    height: 40vh;
 
     @media (max-width: $mobile-width) {
-        height: 70vh;
-        margin-top: 20vh;
-
-        display: flex;
-        flex-direction: column-reverse;
+        height: initial;
+        margin-top: 10vh;
     }
 }
 
 .website-panel .splitscreen1 {
-    position: absolute;
-    top: 0;
-    left: 0;
     height: 100%;
     width: 55%;
-    margin-top: 10vh;
+
+    vertical-align: middle;
 
     text-align: center;
 
     @media (max-width: $mobile-width) {
-        position: relative;
         width: 100%;
+        margin: 0;
     }
 }
 
 .website-panel .splitscreen2 {
-    position: absolute;
-    top: 0;
-    right: 0;
     height: 100%;
     width: 40%;
 
+
+    vertical-align: middle;
+
     @media (max-width: $mobile-width) {
-        position: relative;
         width: 100%;
+        margin: 0;
     }
 }
 
@@ -54,11 +47,6 @@
 
     object-fit: cover;
     object-position: 0 0;
-
-    @media (max-width: $mobile-width) {
-        max-height: 75%;
-        margin-top: 25vh;
-    }
 }
 
 .website-tri-screen {
@@ -74,8 +62,12 @@
     margin-left: 1%;
     margin-right: 1%;
 
+    vertical-align: top;
+
     @media (max-width: $mobile-width) {
         width: 100%;
+
+        display: block;
     }
 }
 
