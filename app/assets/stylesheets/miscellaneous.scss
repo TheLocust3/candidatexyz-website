@@ -42,3 +42,31 @@
 .team-subtitle {
     text-align: center;
 }
+
+.email-text-field {
+    width: 50%;
+    margin-right: 2.5%;
+
+    @media (max-width: $mobile-width) {
+        width: 100%;
+        margin-right: 0;
+    }    
+}
+
+.name-text-field {
+    width: 30%;
+    margin-right: 2.5%;
+
+    @media (max-width: $mobile-width) {
+        width: 65%;
+        margin-right: 5%;
+    }
+}
+
+.zipcode-text-field {
+    width: 15%;
+
+    @media (max-width: $mobile-width) {
+        width: 30%;
+    }
+}

@@ -28,19 +28,19 @@ class SignUpForm extends React.Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit.bind(this)}>
-                <div className='mdc-text-field' data-mdc-auto-init='MDCTextField' style={{ width: '50%', marginRight: '2.5%' }}>
+                <div className='mdc-text-field email-text-field' data-mdc-auto-init='MDCTextField'>
                     <input type='email' name='email' className='mdc-text-field__input' onChange={this.handleChange.bind(this)} required />
                     <label className='mdc-floating-label'>Email</label>
                     <div className='mdc-line-ripple' />
                 </div>
 
-                <div className='mdc-text-field' data-mdc-auto-init='MDCTextField' style={{ width: '30%', marginRight: '2.5%' }}>
+                <div className='mdc-text-field name-text-field' data-mdc-auto-init='MDCTextField'>
                     <input type='text' name='name' className='mdc-text-field__input' onChange={this.handleChange.bind(this)} required />
                     <label className='mdc-floating-label'>Name</label>
                     <div className='mdc-line-ripple' />
                 </div>
 
-                <div className='mdc-text-field' data-mdc-auto-init='MDCTextField' style={{ width: '15%' }}>
+                <div className='mdc-text-field zipcode-text-field' data-mdc-auto-init='MDCTextField'>
                     <input type='text' name='zipcode' className='mdc-text-field__input' onChange={this.handleChange.bind(this)} required />
                     <label className='mdc-floating-label'>Zipcode</label>
                     <div className='mdc-line-ripple' />
