@@ -21,7 +21,7 @@ class WebsitePanel extends React.Component {
                 
                 <div className='website-tri-screen'>
                     <div className='tri-screen'>
-                        <i class='fas fa-desktop website-icon' />
+                        <i className='fas fa-desktop website-icon' />
                         <div className='mdc-typography--headline'>Create a Campaign Website</div>
 
                         <div className='mdc-typography--body1'>
@@ -30,7 +30,7 @@ class WebsitePanel extends React.Component {
                     </div>
 
                     <div className='tri-screen'>
-                        <i class='far fa-envelope website-icon' />
+                        <i className='far fa-envelope website-icon' />
                         <div className='mdc-typography--headline'>Manage Email Lists</div>
 
                         <div className='mdc-typography--body1'>
@@ -39,7 +39,7 @@ class WebsitePanel extends React.Component {
                     </div>
 
                     <div className='tri-screen'>
-                        <i class='far fa-address-book website-icon' />
+                        <i className='far fa-address-book website-icon' />
                         <div className='mdc-typography--headline'>Organize Volunteers</div>
 
                         <div className='mdc-typography--body1'>
