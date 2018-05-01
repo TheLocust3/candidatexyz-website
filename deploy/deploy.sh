@@ -2,7 +2,7 @@
 
 set -e
 
-NAME=test
+NAME=candidatexyzwebsite
 BUCKET=jakekinsella-$NAME
 DEPLOYMENT_GROUP=production
 
