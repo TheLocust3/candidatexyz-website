@@ -12,7 +12,7 @@ class Navbar extends React.Component {
         history.push('/home');
 
         $('html, body').animate({
-            scrollTop: $(window).height() * 2 // TODO: find better way to do this
+            scrollTop: $(document).height()
         }, 1000);
     }
 

@@ -8,41 +8,41 @@ class WebsitePanel extends React.Component {
             <div className='content'>
                 <div className='website-panel'>
                     <div className='splitscreen1'>
-                        <div className='mdc-typography--display1'><b>Running for office should be easy</b></div><br />
+                        <div className='mdc-typography--display2'>Running for office should be easy</div><br />
                         <div className='mdc-typography--headline'>Focus on the important things.</div>
                         <div className='mdc-typography--headline'>We'll handle the campaign.</div><br />
                         <div className='mdc-typography--subtitle1 website-blurb'>Create a beautiful website, manage your email lists, organize your volunteers, and more. All at the click of a button.</div>
                     </div>
 
                     <div className='splitscreen2'>
-                        <img className='website-image' src='https://d3n8a8pro7vhmx.cloudfront.net/3dna/pages/43095/attachments/original/1506608482/screenshot-website.png?1506608482' />
+                        <img className='website-image' src='/website.jpeg' />
                     </div>
                 </div>
                 
                 <div className='website-tri-screen'>
                     <div className='tri-screen'>
-                        <img className='website-tri-screen-image' src='https://d3n8a8pro7vhmx.cloudfront.net/3dna/pages/43095/attachments/original/1506608484/rfo-icon.png?1506608484' />
-                        <div className='mdc-typography--headline'><b>Create a Campaign Website</b></div>
+                        <i class='fas fa-desktop website-icon' />
+                        <div className='mdc-typography--headline'>Create a Campaign Website</div>
 
-                        <div>
+                        <div className='mdc-typography--body1'>
                             Create a beautiful website and allow your staff to update it with ease.
                         </div>
                     </div>
 
                     <div className='tri-screen'>
-                        <img className='website-tri-screen-image' src='https://d3n8a8pro7vhmx.cloudfront.net/3dna/pages/43095/attachments/original/1506608484/rfo-icon.png?1506608484' />
-                        <div className='mdc-typography--headline'><b>Manage Email Lists</b></div>
+                        <i class='far fa-envelope website-icon' />
+                        <div className='mdc-typography--headline'>Manage Email Lists</div>
 
-                        <div>
+                        <div className='mdc-typography--body1'>
                             Easily send styled emails to all your supporters.
                         </div>
                     </div>
 
                     <div className='tri-screen'>
-                        <img className='website-tri-screen-image' src='https://d3n8a8pro7vhmx.cloudfront.net/3dna/pages/43095/attachments/original/1506608484/rfo-icon.png?1506608484' />
-                        <div className='mdc-typography--headline'><b>Organize Volunteers</b></div>
+                        <i class='far fa-address-book website-icon' />
+                        <div className='mdc-typography--headline'>Organize Volunteers</div>
 
-                        <div>
+                        <div className='mdc-typography--body1'>
                             Mobilize your volunteers all with sign ups on your website.
                         </div>
                     </div>
