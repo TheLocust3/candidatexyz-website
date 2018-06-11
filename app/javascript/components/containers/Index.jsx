@@ -26,7 +26,7 @@ class Index extends React.Component {
 
                     <div className='header-text'>
                         <div className='mdc-typography--display4'>candidateXYZ</div>
-                        <div className='mdc-typography--display1 header-text-subtitle'>Democratizing democracy.</div>
+                        <div className='mdc-typography--display1 header-text-subtitle'>Making running for office easy.</div>
                     </div>
                 </Parallax>
 

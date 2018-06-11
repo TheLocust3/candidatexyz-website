@@ -24,7 +24,7 @@ class About extends React.Component {
                 <h1 className='mdc-typography--display1'>Company</h1>
 
                 <p>
-                    At the end of his senior year of high school, Jake Kinsella founded candidateXYZ. He founded the company when he noticed how few politicians actually had websites and how difficult it was to run for office. With this in mind, candidateXYZ was born. Currently, we work with poltiicians to create websites for their campaigns and run their technological operations.
+                    At the end of his senior year of high school, Jake Kinsella founded candidateXYZ. He founded the company when he noticed how few politicians actually had websites and how difficult it was to run for office. With this in mind, candidateXYZ was born. Currently, we work with poltiicians to create websites for their campaigns and run their technological operations. In the future, we plan to open our technology up to the world and make it easy for anybody to run for office.
                 </p>
                 
                 <h1 className='mdc-typography--display1'>Team</h1>
