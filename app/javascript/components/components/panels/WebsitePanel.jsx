@@ -39,7 +39,7 @@ class WebsitePanel extends React.Component {
 
                     <div className='tri-screen'>
                         <i className='far fa-address-book website-icon' />
-                        <div className='mdc-typography--headline'>Mobilize Volunteers</div>
+                        <div className='mdc-typography--headline'>Organize Volunteers</div>
 
                         <div className='mdc-typography--body1'>
                             Mobilize your volunteers with fliers, posters, and yard signs.
