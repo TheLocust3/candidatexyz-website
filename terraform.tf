@@ -162,7 +162,7 @@ resource "aws_autoscaling_group" "autoscaling" {
   max_size             = "2"
   min_size             = "1"
   launch_configuration = "${aws_launch_configuration.launch.name}"
-  availability_zones   = ["${data.aws_availability_zone.zone}"]
+  availability_zones   = ["${data.aws_availability_zone.zone.name}"]
 
   lifecycle {
     create_before_destroy = true
