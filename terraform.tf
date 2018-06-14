@@ -178,7 +178,7 @@ resource "aws_autoscaling_group" "autoscaling" {
   min_size             = "1"
   launch_configuration = "${aws_launch_configuration.launch.name}"
   availability_zones   = ["${data.aws_availability_zone.zone.name}"]
-  load_balancers       = ["${aws_lb.load_balancer.id}"]
+  load_balancers       = "${aws_lb.load_balancer.name}"
 
   lifecycle {
     create_before_destroy = true
