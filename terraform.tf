@@ -24,6 +24,10 @@ data "aws_ami" "image" {
   most_recent = true
 }
 
+data "aws_availability_zone" "zone" {
+  name = "us-east-1a"
+}
+
 resource "random_id" "database_password" {
   keepers = {
     password = "${var.username}"
@@ -158,6 +162,7 @@ resource "aws_autoscaling_group" "autoscaling" {
   max_size             = "2"
   min_size             = "1"
   launch_configuration = "${aws_launch_configuration.launch.name}"
+  availability_zones   = ["${data.aws_availability_zone.zone}"]
 
   lifecycle {
     create_before_destroy = true
