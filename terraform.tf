@@ -173,7 +173,7 @@ resource "aws_lb" "load_balancer" {
   name               = "${var.name}-lb"
   internal           = false
   load_balancer_type = "application"
-  subnets            = ["${var.aws_subnet.east1.*.id}"]
+  subnets            = ["${data.aws_subnet.east1.id}", "${data.aws_subnet.east2.id}"]
 
   access_logs {
     bucket  = "${aws_s3_bucket.logs.bucket}"
