@@ -141,13 +141,12 @@ resource "aws_iam_role_policy_attachment" "deployment" {
 }
 
 resource "aws_launch_configuration" "launch" {
-  name                        = "${var.name}-config"
-  image_id                    = "${data.aws_ami.image.id}"
-  instance_type               = "t2.micro"
-  security_groups             = ["${aws_security_group.security_group.id}"]
-  iam_instance_profile        = "${aws_iam_instance_profile.ec2-profile.name}"
-  associate_public_ip_address = true
-  key_name                    = "${var.key}"
+  name                 = "${var.name}-config"
+  image_id             = "${data.aws_ami.image.id}"
+  instance_type        = "t2.micro"
+  security_groups      = ["${aws_security_group.security_group.id}"]
+  iam_instance_profile = "${aws_iam_instance_profile.ec2-profile.name}"
+  key_name             = "${var.key}"
 
   lifecycle {
     create_before_destroy = true
