@@ -52,10 +52,6 @@ resource "random_id" "random" {
   byte_length = 8
 }
 
-resource "aws_s3_bucket" "logs" {
-  bucket = "${var.name}-logs"
-}
-
 resource "aws_security_group" "security_group" {
   name        = "${var.name} security group"
   description = "Managed by Terraform"
@@ -174,12 +170,6 @@ resource "aws_lb" "load_balancer" {
   internal           = false
   load_balancer_type = "application"
   subnets            = ["${data.aws_subnet.east1.id}", "${data.aws_subnet.east2.id}"]
-
-  access_logs {
-    bucket  = "${aws_s3_bucket.logs.bucket}"
-    prefix  = "${var.name}-lb"
-    enabled = true
-  }
 }
 
 resource "aws_autoscaling_group" "autoscaling" {
