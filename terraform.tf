@@ -11,7 +11,11 @@ variable "username" {
 }
 
 data "aws_ami" "image" {
-  name_regex  = "ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server"
+  filter {
+    name   = "image-id"
+    values = ["ami-a4dc46db"]
+  }
+
   most_recent = true
 }
 
