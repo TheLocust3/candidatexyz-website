@@ -10,6 +10,10 @@ variable "username" {
   default = "candidatexyz"
 }
 
+variable "key" {
+  default = "candidatexyz"
+}
+
 data "aws_ami" "image" {
   filter {
     name   = "image-id"
@@ -141,7 +145,7 @@ resource "aws_instance" "instance" {
   vpc_security_group_ids      = ["${aws_security_group.security_group.id}"]
   associate_public_ip_address = true
   iam_instance_profile        = "${aws_iam_instance_profile.ec2-profile.name}"
-  key_name                    = "${var.name}"
+  key_name                    = "${var.key}"
 
   tags {
     Name = "${var.name}"
