@@ -44,6 +44,10 @@ resource "random_id" "random" {
   byte_length = 8
 }
 
+resource "aws_s3_bucket" "logs" {
+  bucket = "${var.name}-logs"
+}
+
 resource "aws_security_group" "security_group" {
   name        = "${var.name} security group"
   description = "Managed by Terraform"
@@ -161,9 +165,10 @@ resource "aws_lb" "load_balancer" {
   name               = "${var.name}-lb"
   internal           = false
   load_balancer_type = "application"
+  subnets            = ["${aws_subnet.public.*.id}"]
 
   access_logs {
-    bucket  = "${var.name}-logs"
+    bucket  = "${aws_s3_bucket.logs.bucket}"
     prefix  = "${var.name}-lb"
     enabled = true
   }
