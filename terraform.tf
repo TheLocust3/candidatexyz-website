@@ -15,11 +15,12 @@ variable "key" {
 }
 
 data "aws_ami" "image" {
-  filter {
+  /*filter { // default Ubuntu image
     name   = "image-id"
     values = ["ami-a4dc46db"]
-  }
+  }*/
 
+  name_regex  = "candidateXYZ Website"
   most_recent = true
 }
 
@@ -139,16 +140,28 @@ resource "aws_iam_role_policy_attachment" "deployment" {
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSCodeDeployRole"
 }
 
-resource "aws_instance" "instance" {
-  ami                         = "${data.aws_ami.image.id}"
+resource "aws_launch_configuration" "launch" {
+  name                        = "${var.name}-config"
+  image_id                    = "${data.aws_ami.image.id}"
   instance_type               = "t2.micro"
-  vpc_security_group_ids      = ["${aws_security_group.security_group.id}"]
-  associate_public_ip_address = true
+  security_groups             = ["${aws_security_group.security_group.id}"]
   iam_instance_profile        = "${aws_iam_instance_profile.ec2-profile.name}"
+  associate_public_ip_address = true
   key_name                    = "${var.key}"
 
-  tags {
-    Name = "${var.name}"
+  lifecycle {
+    create_before_destroy = true
+  }
+}
+
+resource "aws_autoscaling_group" "autoscaling" {
+  name                 = "${var.name}"
+  max_size             = "2"
+  min_size             = "1"
+  launch_configuration = "${aws_launch_configuration.launch.name}"
+
+  lifecycle {
+    create_before_destroy = true
   }
 }
 
