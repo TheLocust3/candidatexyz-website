@@ -28,6 +28,14 @@ data "aws_availability_zone" "zone" {
   name = "us-east-1a"
 }
 
+data "aws_subnet" "east1" {
+  availability_zone = "us-east-1a"
+}
+
+data "aws_subnet" "east2" {
+  availability_zone = "us-east-1b"
+}
+
 resource "random_id" "database_password" {
   keepers = {
     password = "${var.username}"
@@ -165,7 +173,7 @@ resource "aws_lb" "load_balancer" {
   name               = "${var.name}-lb"
   internal           = false
   load_balancer_type = "application"
-  subnets            = ["${aws_subnet.public.*.id}"]
+  subnets            = ["${aws_subnet.east1.id}", "${aws_subnet.east2.id}"]
 
   access_logs {
     bucket  = "${aws_s3_bucket.logs.bucket}"
