@@ -197,10 +197,6 @@ resource "aws_codedeploy_deployment_group" "deployment" {
   }
 }
 
-output "instance_ip" {
-  value = "${aws_instance.instance.public_ip}"
-}
-
 output "database_username" {
   value = "${aws_db_instance.db_instance.username}"
 }
