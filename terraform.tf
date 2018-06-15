@@ -36,6 +36,10 @@ data "aws_subnet" "east2" {
   availability_zone = "us-east-1b"
 }
 
+data "aws_vpc" "default" {
+  default = true
+}
+
 resource "random_id" "database_password" {
   keepers = {
     password = "${var.username}"
@@ -165,20 +169,20 @@ resource "aws_launch_configuration" "launch" {
   }
 }
 
-resource "aws_lb" "load_balancer" {
-  name               = "${var.name}-lb"
-  internal           = false
-  load_balancer_type = "application"
-  subnets            = ["${data.aws_subnet.east1.id}", "${data.aws_subnet.east2.id}"]
+resource "aws_lb_target_group" "target" {
+  name     = "${var.name}-targets"
+  port     = 443
+  protocol = "HTTPS"
+  vpc_id   = "${data.aws_vpc.default.id}"
 }
 
 resource "aws_autoscaling_group" "autoscaling" {
   name                 = "${var.name}"
-  max_size             = "2"
+  max_size             = "1"
   min_size             = "1"
   launch_configuration = "${aws_launch_configuration.launch.name}"
   availability_zones   = ["${data.aws_availability_zone.zone.name}"]
-  load_balancers       = "${aws_lb.load_balancer.name}"
+  target_group_arns    = ["${aws_lb_target_group.target.arn}"]
 
   lifecycle {
     create_before_destroy = true
@@ -209,11 +213,32 @@ resource "aws_codedeploy_deployment_group" "deployment" {
   app_name              = "${aws_codedeploy_app.application.name}"
   deployment_group_name = "production"
   service_role_arn      = "${aws_iam_role.deployment.arn}"
+  autoscaling_groups    = ["${aws_autoscaling_group.autoscaling.id}"]
 
-  ec2_tag_filter {
-    type  = "KEY_AND_VALUE"
-    key   = "Name"
-    value = "${var.name}"
+  deployment_style {
+    deployment_option = "WITH_TRAFFIC_CONTROL"
+    deployment_type   = "BLUE_GREEN"
+  }
+
+  load_balancer_info {
+    elb_info {
+      name = "${aws_lb_target_group.target.name}"
+    }
+  }
+
+  blue_green_deployment_config {
+    deployment_ready_option {
+      action_on_timeout    = "STOP_DEPLOYMENT"
+    }
+
+    # Currently (6/14/18), Terraform does a shit job with this
+    # green_fleet_provisioning_option {
+      # action = "COPY_AUTO_SCALING_GROUP"
+    # }
+
+    terminate_blue_instances_on_deployment_success {
+      action = "TERMINATE"
+    }
   }
 }
 
