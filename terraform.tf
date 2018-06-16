@@ -15,12 +15,12 @@ variable "key" {
 }
 
 data "aws_ami" "image" {
-  /*filter { // default Ubuntu image
-    name   = "image-id"
+  /*filter {
+    name   = "image-id"       // default Ubuntu image
     values = ["ami-a4dc46db"]
   }*/
 
-  name_regex  = "candidateXYZ Website"
+  name_regex  = "candidatexyz-website"
   most_recent = true
 }
 
@@ -169,17 +169,36 @@ resource "aws_launch_configuration" "launch" {
   }
 }
 
+resource "aws_lb" "load_balancer" {
+  name               = "${var.name}-lb"
+  internal           = false
+  load_balancer_type = "application"
+  security_groups    = ["${aws_security_group.security_group.id}"]
+  subnets            = ["${data.aws_subnet.east1.id}", "${data.aws_subnet.east2.id}"]
+}
+
 resource "aws_lb_target_group" "target" {
   name     = "${var.name}-targets"
-  port     = 443
-  protocol = "HTTPS"
+  port     = 80
+  protocol = "HTTP"
   vpc_id   = "${data.aws_vpc.default.id}"
+}
+
+resource "aws_lb_listener" "lb_listener" {
+  load_balancer_arn = "${aws_lb.load_balancer.arn}"
+  port              = "80"
+  protocol          = "HTTP"
+
+  default_action {
+    target_group_arn = "${aws_lb_target_group.target.arn}"
+    type             = "forward"
+  }
 }
 
 resource "aws_autoscaling_group" "autoscaling" {
   name                 = "${var.name}"
-  max_size             = "1"
-  min_size             = "1"
+  max_size             = "2"
+  min_size             = "2"
   launch_configuration = "${aws_launch_configuration.launch.name}"
   availability_zones   = ["${data.aws_availability_zone.zone.name}"]
   target_group_arns    = ["${aws_lb_target_group.target.arn}"]
@@ -216,29 +235,8 @@ resource "aws_codedeploy_deployment_group" "deployment" {
   autoscaling_groups    = ["${aws_autoscaling_group.autoscaling.id}"]
 
   deployment_style {
-    deployment_option = "WITH_TRAFFIC_CONTROL"
-    deployment_type   = "BLUE_GREEN"
-  }
-
-  load_balancer_info {
-    elb_info {
-      name = "${aws_lb_target_group.target.name}"
-    }
-  }
-
-  blue_green_deployment_config {
-    deployment_ready_option {
-      action_on_timeout    = "STOP_DEPLOYMENT"
-    }
-
-    # Currently (6/14/18), Terraform does a shit job with this
-    # green_fleet_provisioning_option {
-      # action = "COPY_AUTO_SCALING_GROUP"
-    # }
-
-    terminate_blue_instances_on_deployment_success {
-      action = "TERMINATE"
-    }
+    deployment_option = "WITHOUT_TRAFFIC_CONTROL"
+    deployment_type   = "IN_PLACE"
   }
 }
 
