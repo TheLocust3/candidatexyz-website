@@ -16,7 +16,7 @@ class Footer extends React.Component {
                 <Link className='footer-link' to='/privacy'>Privacy</Link>
 
                 <div className='footer-disclaimer'>
-                    © 2018 - candidateXYZ, Inc. All rights reserved
+                    © 2018 - candidateXYZ, LLC. All rights reserved
                 </div>
             </div>
         );
