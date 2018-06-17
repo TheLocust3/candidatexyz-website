@@ -188,7 +188,7 @@ resource "aws_lb_target_group" "target" {
   vpc_id   = "${data.aws_vpc.default.id}"
 }
 
-resource "aws_lb_listener" "lb_listener" {
+resource "aws_lb_listener" "lb_listener1" {
   load_balancer_arn = "${aws_lb.load_balancer.arn}"
   port              = "443"
   protocol          = "HTTPS"
@@ -201,7 +201,7 @@ resource "aws_lb_listener" "lb_listener" {
   }
 }
 
-resource "aws_lb_listener" "lb_listener" {
+resource "aws_lb_listener" "lb_listener2" {
   load_balancer_arn = "${aws_lb.load_balancer.arn}"
   port              = "80"
   protocol          = "HTTP"
