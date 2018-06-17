@@ -15,10 +15,7 @@ variable "key" {
 }
 
 data "aws_ami" "image" {
-  /*filter {
-    name   = "image-id"       // default Ubuntu image
-    values = ["ami-a4dc46db"]
-  }*/
+  # name_regex = "candidatexyz-barebones"
 
   name_regex  = "candidatexyz-website"
   most_recent = true
