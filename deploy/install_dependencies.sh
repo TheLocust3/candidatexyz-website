@@ -24,6 +24,7 @@ gem install bundler
 
 sudo rm /etc/nginx/sites-available/default
 sudo cp /home/ubuntu/rails/deploy/nginx /etc/nginx/sites-available/default
+sudo systemctl restart nginx
 
 # setup server
 cd /home/ubuntu/rails

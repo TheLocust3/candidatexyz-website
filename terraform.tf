@@ -201,6 +201,17 @@ resource "aws_lb_listener" "lb_listener" {
   }
 }
 
+resource "aws_lb_listener" "lb_listener" {
+  load_balancer_arn = "${aws_lb.load_balancer.arn}"
+  port              = "80"
+  protocol          = "HTTP"
+
+  default_action {
+    target_group_arn = "${aws_lb_target_group.target.arn}"
+    type             = "forward"
+  }
+}
+
 resource "aws_autoscaling_group" "autoscaling" {
   name                 = "${var.name}"
   max_size             = "2"

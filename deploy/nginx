@@ -4,10 +4,14 @@ upstream app {
 
 server {
     listen 80;
-    server_name candidatexyz.com candidatexyz.com;
+    server_name candidatexyz.com www.candidatexyz.com;
     root /home/ubuntu;
 
     try_files $uri @app;
+
+    if ($http_x_forwarded_proto = http) {
+        return 301 https://$host$request_uri;
+    }
 
     location @app {
         proxy_pass http://app;
