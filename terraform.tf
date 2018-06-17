@@ -40,6 +40,10 @@ data "aws_vpc" "default" {
   default = true
 }
 
+data "aws_acm_certificate" "certificate" {
+  domain = "*.candidatexyz.com"
+}
+
 resource "random_id" "database_password" {
   keepers = {
     password = "${var.username}"
@@ -186,8 +190,10 @@ resource "aws_lb_target_group" "target" {
 
 resource "aws_lb_listener" "lb_listener" {
   load_balancer_arn = "${aws_lb.load_balancer.arn}"
-  port              = "80"
-  protocol          = "HTTP"
+  port              = "443"
+  protocol          = "HTTPS"
+  ssl_policy        = "ELBSecurityPolicy-2016-08"
+  certificate_arn   = "${data.aws_acm_certificate.certificate.arn}"
 
   default_action {
     target_group_arn = "${aws_lb_target_group.target.arn}"
