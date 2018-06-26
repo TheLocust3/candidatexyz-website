@@ -52,7 +52,7 @@ class SignUpForm extends React.Component {
                     <div className='mdc-line-ripple' />
                 </div>
 
-                <button className='mdc-button mdc-button--raised' data-mdc-auto-init='MDCRipple' style={{ float: 'right' }}>Submit</button>
+                <button className='mdc-typography--headline6 mdc-button mdc-button--raised' data-mdc-auto-init='MDCRipple' style={{ float: 'right' }}>Submit</button>
             </form>
         );
     }

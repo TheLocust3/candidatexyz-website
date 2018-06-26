@@ -15,10 +15,10 @@ class SignUpsList extends React.Component {
                     return (
                         <Link className='unstyled-link' key={signUp.id} to={`/admin/sign-ups/${signUp.id}`}>
                             <li className='mdc-list-item'>
-                                <span className='mdc-list-item__text'>
+                                <span className='mdc-typography--body1 mdc-list-item__text'>
                                     {signUp.name}
 
-                                    <span className='mdc-list-item__secondary-text'>
+                                    <span className='mdc-typography--body2 mdc-list-item__secondary-text'>
                                         {signUp.email}
                                     </span>
                                 </span>

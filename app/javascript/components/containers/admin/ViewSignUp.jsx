@@ -19,7 +19,7 @@ class ViewSignUp extends React.Component {
     render() {
         return (
             <div className='content'>
-                <div className='mdc-typography--display3'>Show Sign Up</div><br />
+                <div className='mdc-typography--headline4'>Show Sign Up</div>
 
                 <ShowSignUp signUp={this.props.signUp} />
 

@@ -69,7 +69,7 @@ export default class SignInForm extends React.Component {
             <form onSubmit={this.handleSubmit.bind(this)}>
                 {this.renderInputs()}<br />
 
-                <button className='mdc-button mdc-button--raised' data-mdc-auto-init='MDCRipple'>Sign In</button>
+                <button className='mdc-typography--headline6 mdc-button mdc-button--raised' data-mdc-auto-init='MDCRipple'>Sign In</button>
                 {this.renderError()}
             </form>
         );

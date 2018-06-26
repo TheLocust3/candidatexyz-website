@@ -17,7 +17,7 @@ class SignInContainer extends React.Component {
     render() {
         return (
             <div className='content sign-in-form'>
-                <div className='mdc-typography--display3'>Sign In</div><br />
+                <div className='mdc-typography--headline4'>Sign In</div><br />
 
                 <SignInForm redirectUrl='/admin' /><br />
 

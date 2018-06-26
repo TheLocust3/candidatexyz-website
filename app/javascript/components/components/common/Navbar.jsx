@@ -22,9 +22,9 @@ class Navbar extends React.Component {
 
         return (
             <div className={`navbar ${invertedNavbar} ${floatingNavbar}`}>
-                <Link className='navbar-link' to='/home'>Home</Link>
+                <Link className='mdc-typography--headline6 navbar-link' to='/home'>Home</Link>
 
-                <button className='mdc-button mdc-button--raised navbar-button' onClick={this.onClickSignUp.bind(this)}>
+                <button className='mdc-typography--headline6 mdc-button mdc-button--raised navbar-button' onClick={this.onClickSignUp.bind(this)}>
                     Sign up
                 </button>
             </div>

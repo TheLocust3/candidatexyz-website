@@ -8,17 +8,17 @@ class ShowSignUp extends React.Component {
 
     render() {
         return (
-            <div className='content'>
-                <div className='mdc-typography--display1'>Name</div>
+            <div className='mdc-typography--body1 content'>
+                <div className='mdc-typography--headline6'>Name</div>
                 {this.props.signUp.name}<br /><br /><br />
 
-                <div className='mdc-typography--display1'>Email</div>
+                <div className='mdc-typography--headline6'>Email</div>
                 {this.props.signUp.email}<br /><br /><br />
 
-                <div className='mdc-typography--display1'>Zipcode</div>
+                <div className='mdc-typography--headline6'>Zipcode</div>
                 {this.props.signUp.zipcode}<br /><br /><br />
 
-                <div className='mdc-typography--display1'>Reason</div>
+                <div className='mdc-typography--headline6'>Reason</div>
                 {this.props.signUp.reason}
             </div>
         );

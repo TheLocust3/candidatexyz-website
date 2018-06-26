@@ -12,10 +12,10 @@ class Footer extends React.Component {
                     <a href='http://twitter.com'><i className='fab fa-twitter footer-icon' style={{ fontSize: `2.5em` }} /></a>
                 </div>
 
-                <Link className='footer-link' to='/about'>About</Link>
-                <Link className='footer-link' to='/privacy'>Privacy</Link>
+                <Link className='mdc-typography--body1 footer-link' to='/about'>About</Link>
+                <Link className='mdc-typography--body1 footer-link' to='/privacy'>Privacy</Link>
 
-                <div className='footer-disclaimer'>
+                <div className='mdc-typography--body2 footer-disclaimer'>
                     © 2018 - candidateXYZ, LLC. All rights reserved
                 </div>
             </div>

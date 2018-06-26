@@ -27,10 +27,10 @@ class AdminOverview extends React.Component {
     render() {
         return (
             <div className='content'>
-                <div className='mdc-typography--display3'>Admin Overview</div>
-                <a href='#' onClick={this.onSignOut}>Sign out</a><br /><br />
+                <div className='mdc-typography--headline4'>Admin Overview</div>
+                <a href='#' className='mdc-typography--body1' onClick={this.onSignOut}>Sign out</a><br /><br />
 
-                <div className='mdc-typography--display1'>Sign Up List</div>
+                <div className='mdc-typography--headline6'>Sign Up List</div>
                 <SignUpsList signUps={this.props.signUps} />
 
                 <MDCAutoInit />
