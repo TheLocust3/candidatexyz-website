@@ -1,10 +1,16 @@
+import "babel-polyfill";
+
+import 'core-js/es6/map';
+import 'core-js/es6/set';
+import 'raf/polyfill';
+
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, Switch } from 'react-router-dom';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import thunkMiddleware from 'redux-thunk';
+import thunkMiddleware from 'redux-thunk/es';
 
 import reducer from '../components/reducers/root-reducer';
 import { history } from '../constants';
