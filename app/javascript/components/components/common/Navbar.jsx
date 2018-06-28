@@ -17,6 +17,8 @@ class Navbar extends React.Component {
     }
 
     render() {
+        if (this.props.fullscreen) return null;
+        
         let invertedNavbar = this.props.invertedNavbar ? 'navbar-inverted' : '';
         let floatingNavbar = this.props.floatingNavbar ? '' : 'navbar-relative';
 
@@ -35,7 +37,8 @@ class Navbar extends React.Component {
 function mapStateToProps(state) {
     return {
         invertedNavbar: state.global.invertedNavbar,
-        floatingNavbar: state.global.floatingNavbar
+        floatingNavbar: state.global.floatingNavbar,
+        fullscreen: state.global.fullscreen
     };
 }
 

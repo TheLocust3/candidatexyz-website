@@ -25,6 +25,8 @@ import Index from '../components/containers/Index';
 import About from '../components/containers/About';
 import Privacy from '../components/containers/Privacy';
 
+import Unsubscribe from '../components/containers/Unsubscribe';
+
 $.ajaxSetup({
     headers: {
         'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
@@ -57,6 +59,8 @@ class Base extends React.Component {
                             <Route exact path='/home' component={Index} />
                             <Route exact path='/about' component={About} />
                             <Route exact path='/privacy' component={Privacy} />
+
+                            <Route exact path='/unsubscribe/:token' component={Unsubscribe} />
 
                             <Route exact path='/sign-in' component={SignInContainer} />
 
