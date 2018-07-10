@@ -29,26 +29,26 @@ class SignUpForm extends React.Component {
         return (
             <form onSubmit={this.handleSubmit.bind(this)}>
                 <div className='mdc-text-field email-text-field' data-mdc-auto-init='MDCTextField'>
-                    <input type='email' name='email' className='mdc-text-field__input' onChange={this.handleChange.bind(this)} required />
-                    <label className='mdc-floating-label'>Email</label>
+                    <input type='email' name='email' id='email-field' className='mdc-text-field__input' onChange={this.handleChange.bind(this)} required />
+                    <label className='mdc-floating-label' htmlFor='email-field'>Email</label>
                     <div className='mdc-line-ripple' />
                 </div>
 
                 <div className='mdc-text-field name-text-field' data-mdc-auto-init='MDCTextField'>
-                    <input type='text' name='name' className='mdc-text-field__input' onChange={this.handleChange.bind(this)} required />
-                    <label className='mdc-floating-label'>Name</label>
+                    <input type='text' name='name' id='name-field' className='mdc-text-field__input' onChange={this.handleChange.bind(this)} required />
+                    <label className='mdc-floating-label' htmlFor='name-field'>Name</label>
                     <div className='mdc-line-ripple' />
                 </div>
 
                 <div className='mdc-text-field zipcode-text-field' data-mdc-auto-init='MDCTextField'>
-                    <input type='text' name='zipcode' className='mdc-text-field__input' onChange={this.handleChange.bind(this)} required />
-                    <label className='mdc-floating-label'>Zipcode</label>
+                    <input type='text' name='zipcode' id='zipcode-field' className='mdc-text-field__input' onChange={this.handleChange.bind(this)} required />
+                    <label className='mdc-floating-label' htmlFor='zipcode-field'>Zipcode</label>
                     <div className='mdc-line-ripple' />
                 </div>
 
                 <div className='mdc-text-field mdc-text-field--textarea' data-mdc-auto-init='MDCTextField' style={{ width: '100%' }}>
-                    <textarea type='text' name='reason' className='mdc-text-field__input' onChange={this.handleChange.bind(this)} rows={5} required />
-                    <label className='mdc-floating-label'>Who are you?</label>
+                    <textarea type='text' name='reason' id='reason-field' className='mdc-text-field__input' onChange={this.handleChange.bind(this)} rows={5} required />
+                    <label className='mdc-floating-label' htmlFor='reason-field'>Who are you?</label>
                     <div className='mdc-line-ripple' />
                 </div>
 
