@@ -32,6 +32,10 @@
     color: darken(white, 10%);
 }
 
+.navbar-inverted .navbar-link:hover {
+    color: lighten(black, 40%);
+}
+
 .navbar-button {
     margin-left: 3%;
 }

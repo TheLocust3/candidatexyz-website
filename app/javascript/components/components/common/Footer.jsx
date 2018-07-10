@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -8,8 +7,8 @@ class Footer extends React.Component {
         return (
             <div className='footer'>
                 <div>
-                    <a href='http://facebook.com'><i className='fab fa-facebook-f footer-icon' style={{ fontSize: `2.5em` }} /></a>
-                    <a href='http://twitter.com'><i className='fab fa-twitter footer-icon' style={{ fontSize: `2.5em` }} /></a>
+                    <a href='https://www.instagram.com/'><i className='fab fa-instagram footer-icon' style={{ fontSize: `2.5em` }} /></a>
+                    <a href='https://twitter.com/jakekinsella_'><i className='fab fa-twitter footer-icon' style={{ fontSize: `2.5em` }} /></a>
                 </div>
 
                 <Link className='mdc-typography--body1 footer-link' to='/about'>About</Link>

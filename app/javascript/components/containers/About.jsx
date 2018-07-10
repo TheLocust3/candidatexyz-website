@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import React from 'react';
 import { connect } from 'react-redux';
 
@@ -29,14 +28,16 @@ class About extends React.Component {
                 
                 <h1 className='mdc-typography--headline5'>Team</h1>
 
-                <div className='team-profile'>
-                    <img className='team-image' src='/jake.png' />
+                <a className='unstyled-link' href='https://www.linkedin.com/in/jake-kinsella/'>
+                    <div className='team-profile'>
+                        <img className='team-image' src='/jake.png' />
 
-                    <div className='team-subtitle'>
-                        <div className='mdc-typography--headline6'>Jake Kinsella</div>
-                        <div className='mdc-typography--body1'>CTO & Founder</div>
+                        <div className='team-subtitle'>
+                            <div className='mdc-typography--headline6'>Jake Kinsella</div>
+                            <div className='mdc-typography--body1'>CTO & Founder</div>
+                        </div>
                     </div>
-                </div>
+                </a>
 
                 <MDCAutoInit />
             </div>
