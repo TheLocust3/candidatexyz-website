@@ -43,6 +43,7 @@ data "aws_vpc" "default" {
 
 data "aws_acm_certificate" "certificate" {
   domain = "candidatexyz.com"
+  types  = ["AMAZON_ISSUED"]
 }
 
 data "aws_db_instance" "database" {
