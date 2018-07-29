@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+import { TextField, Button } from 'candidatexyz-common-js/lib/elements';
 
 import AuthApi from '../../../api/auth-api';
 
@@ -49,17 +50,9 @@ export default class SignInForm extends React.Component {
     renderInputs() {
         return (
             <div>
-                <div className='mdc-text-field' data-mdc-auto-init='MDCTextField' style={{ width: '100%' }}>
-                    <input type='email' name='email' className='mdc-text-field__input' onChange={this.handleChange.bind(this)} />
-                    <label className='mdc-floating-label'>Email</label>
-                    <div className='mdc-line-ripple' />
-                </div>
+                <TextField type='email' name='email' label='Email' onChange={this.handleChange.bind(this)} style={{ width: '100%' }} />
 
-                <div className='mdc-text-field' data-mdc-auto-init='MDCTextField' style={{ width: '100%' }}>
-                    <input type='password' name='password' className='mdc-text-field__input' onChange={this.handleChange.bind(this)} />
-                    <label className='mdc-floating-label'>Password</label>
-                    <div className='mdc-line-ripple' />
-                </div>
+                <TextField type='password' name='password' label='Password' onChange={this.handleChange.bind(this)} style={{ width: '100%' }} />
             </div>
         );
     }
@@ -69,7 +62,10 @@ export default class SignInForm extends React.Component {
             <form onSubmit={this.handleSubmit.bind(this)}>
                 {this.renderInputs()}<br />
 
-                <button className='mdc-typography--headline6 mdc-button mdc-button--raised' data-mdc-auto-init='MDCRipple'>Sign In</button>
+                <Button>
+                    <Text type='headline6'>Sign In</Text>
+                </Button>
+                
                 {this.renderError()}
             </form>
         );

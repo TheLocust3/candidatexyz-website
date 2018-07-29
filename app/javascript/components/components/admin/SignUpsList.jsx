@@ -1,8 +1,8 @@
 import _ from 'lodash';
 import React from 'react';
-import { Link } from 'react-router-dom'
-
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom'
+import { Text } from 'candidatexyz-common-js/lib/elements';
 
 class SignUpsList extends React.Component {
 
@@ -16,10 +16,10 @@ class SignUpsList extends React.Component {
                         <Link className='unstyled-link' key={signUp.id} to={`/admin/sign-ups/${signUp.id}`}>
                             <li className='mdc-list-item'>
                                 <span className='mdc-typography--body1 mdc-list-item__text'>
-                                    {signUp.name}
+                                    <Text type='body1'>{signUp.name}</Text>
 
                                     <span className='mdc-typography--body2 mdc-list-item__secondary-text'>
-                                        {signUp.email}
+                                        <Text type='body2'>{signUp.email}</Text>
                                     </span>
                                 </span>
                             </li>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Parallax, Background } from 'react-parallax';
-import { MDCAutoInit } from 'candidatexyz-common-js/lib/elements';
+import { Text, MDCAutoInit } from 'candidatexyz-common-js/lib/elements';
 
 import { setInvertedNavbar, setFloatingNavbar } from '../actions/global-actions';
 
@@ -24,8 +24,8 @@ class Index extends React.Component {
                     </Background>
 
                     <div className='header-text'>
-                        <div className='mdc-typography--headline1'>candidateXYZ</div>
-                        <div className='mdc-typography--headline4 header-text-subtitle'>Democratizing democracy.</div>
+                        <Text type='headline1'>candidateXYZ</Text>
+                        <Text className='header-text-subtitle' type='headline4'>Democratizing democracy.</Text>
                     </div>
                 </Parallax>
 

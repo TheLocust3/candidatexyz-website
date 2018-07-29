@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { MDCAutoInit } from 'candidatexyz-common-js/lib/elements';
+import { Text, MDCAutoInit } from 'candidatexyz-common-js/lib/elements';
 
 import { setInvertedNavbar, setFloatingNavbar } from '../../actions/global-actions';
 import { fetchSignUp } from '../../actions/sign-up-actions';
@@ -18,7 +18,7 @@ class ViewSignUp extends React.Component {
     render() {
         return (
             <div className='content'>
-                <div className='mdc-typography--headline4'>Show Sign Up</div>
+                <Text type='headline4'>Show Sign Up</Text>
 
                 <ShowSignUp signUp={this.props.signUp} />
 

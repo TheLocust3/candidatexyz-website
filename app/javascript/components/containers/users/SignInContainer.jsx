@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { MDCAutoInit } from 'candidatexyz-common-js/lib/elements';
+import { Text, MDCAutoInit } from 'candidatexyz-common-js/lib/elements';
 
 import { setInvertedNavbar, setFloatingNavbar } from '../../actions/global-actions';
 
@@ -16,9 +16,11 @@ class SignInContainer extends React.Component {
     render() {
         return (
             <div className='content sign-in-form'>
-                <div className='mdc-typography--headline4'>Sign In</div><br />
+                <Text type='headline4'>Sign In</Text>
+                <br />
 
-                <SignInForm redirectUrl='/admin' /><br />
+                <SignInForm redirectUrl='/admin' />
+                <br />
 
                 <MDCAutoInit />
             </div>

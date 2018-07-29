@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Text } from 'candidatexyz-common-js/lib/elements';
 
 class Footer extends React.Component {
 
@@ -11,11 +12,16 @@ class Footer extends React.Component {
                     <a href='https://twitter.com/jakekinsella_'><i className='fab fa-twitter footer-icon' style={{ fontSize: `2.5em` }} /></a>
                 </div>
 
-                <Link className='mdc-typography--body1 footer-link' to='/about'>About</Link>
-                <Link className='mdc-typography--body1 footer-link' to='/privacy'>Privacy</Link>
+                <Link className='footer-link' to='/about'>
+                    <Text type='body1'>About</Text>
+                </Link>
 
-                <div className='mdc-typography--body2 footer-disclaimer'>
-                    © 2018 - candidateXYZ, LLC. All rights reserved
+                <Link className='footer-link' to='/privacy'>
+                    <Text type='body1'>Privacy</Text>
+                </Link>
+
+                <div className='footer-disclaimer'>
+                    <Text type='body2'>© 2018 - candidateXYZ, LLC. All rights reserved</Text>
                 </div>
             </div>
         );

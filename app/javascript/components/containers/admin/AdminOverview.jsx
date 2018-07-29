@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { MDCAutoInit } from 'candidatexyz-common-js/lib/elements';
+import { Text, MDCAutoInit } from 'candidatexyz-common-js/lib/elements';
 
 import { history } from '../../../constants';
 import { setInvertedNavbar, setFloatingNavbar } from '../../actions/global-actions';
@@ -26,10 +26,13 @@ class AdminOverview extends React.Component {
     render() {
         return (
             <div className='content'>
-                <div className='mdc-typography--headline4'>Admin Overview</div>
-                <a href='#' className='mdc-typography--body1' onClick={this.onSignOut}>Sign out</a><br /><br />
+                <Text type='headline4'>Admin Overview</Text>
+                <a href='#' onClick={this.onSignOut}>
+                    <Text type='body1'>Sign out</Text>
+                </a>
+                <br /><br />
 
-                <div className='mdc-typography--headline6'>Sign Up List</div>
+                <Text type='headline6'>Sign Up List</Text>
                 <SignUpsList signUps={this.props.signUps} />
 
                 <MDCAutoInit />
