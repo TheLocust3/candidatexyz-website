@@ -1,10 +1,9 @@
-import _ from 'lodash';
 import React from 'react';
 import { connect } from 'react-redux';
 import { Parallax, Background } from 'react-parallax';
+import { MDCAutoInit } from 'candidatexyz-common-js/lib/elements';
 
 import { setInvertedNavbar, setFloatingNavbar } from '../actions/global-actions';
-import MDCAutoInit from '../components/common/MDCAutoInit';
 
 import WebsitePanel from '../components/panels/WebsitePanel';
 import SignUpPanel from '../components/panels/SignUpPanel';

@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
 import { connect } from 'react-redux';
+import { MDCAutoInit } from 'candidatexyz-common-js/lib/elements';
 
 import { setInvertedNavbar, setFloatingNavbar } from '../../actions/global-actions';
-import MDCAutoInit from '../../components/common/MDCAutoInit';
 
 import SignInForm from '../../components/users/SignInForm';
 

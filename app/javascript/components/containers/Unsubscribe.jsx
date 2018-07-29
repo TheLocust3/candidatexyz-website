@@ -1,11 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { UnsubscribeApi } from 'candidatexyz-common-js';
+import { Text, Button, MDCAutoInit } from 'candidatexyz-common-js/lib/elements';
 
 import { history } from '../../constants';
 import { setFullscreen } from '../actions/global-actions';
-
-import MDCAutoInit from '../components/common/MDCAutoInit';
 
 class Unsubscribe extends React.Component {
 
@@ -30,9 +29,9 @@ class Unsubscribe extends React.Component {
             <div className='content-15'>
                 <div className='mdc-typography--headline3'>Unsubscribe</div><br /><br />
 
-                <button className='mdc-typography--headline6 mdc-button mdc-button--raised' data-mdc-auto-init='MDCRipple' onClick={this.onClick.bind(this)}>
-                    Unsubscribe
-                </button>
+                <Button onClick={this.onClick.bind(this)}>
+                    <Text type='headline6'>Unsubscribe</Text>
+                </Button>
 
                 <MDCAutoInit />
             </div>

@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import { Text, TextField, TextArea, Button } from 'candidatexyz-common-js/lib/elements';
 
 import SignUpApi from '../../../api/sign-up-api';
 
@@ -28,31 +29,17 @@ class SignUpForm extends React.Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit.bind(this)}>
-                <div className='mdc-text-field email-text-field' data-mdc-auto-init='MDCTextField'>
-                    <input type='email' name='email' id='email-field' className='mdc-text-field__input' onChange={this.handleChange.bind(this)} required />
-                    <label className='mdc-floating-label' htmlFor='email-field'>Email</label>
-                    <div className='mdc-line-ripple' />
-                </div>
+                <TextField className='email-text-field' type='email' name='email' label='Email' onChange={this.handleChange.bind(this)} required />
 
-                <div className='mdc-text-field name-text-field' data-mdc-auto-init='MDCTextField'>
-                    <input type='text' name='name' id='name-field' className='mdc-text-field__input' onChange={this.handleChange.bind(this)} required />
-                    <label className='mdc-floating-label' htmlFor='name-field'>Name</label>
-                    <div className='mdc-line-ripple' />
-                </div>
+                <TextField className='name-text-field' name='name' label='Name' onChange={this.handleChange.bind(this)} required />
 
-                <div className='mdc-text-field zipcode-text-field' data-mdc-auto-init='MDCTextField'>
-                    <input type='text' name='zipcode' id='zipcode-field' className='mdc-text-field__input' onChange={this.handleChange.bind(this)} required />
-                    <label className='mdc-floating-label' htmlFor='zipcode-field'>Zipcode</label>
-                    <div className='mdc-line-ripple' />
-                </div>
+                <TextField className='zipcode-text-field' name='zipcode' label='Zipcode' onChange={this.handleChange.bind(this)} required />
 
-                <div className='mdc-text-field mdc-text-field--textarea' data-mdc-auto-init='MDCTextField' style={{ width: '100%' }}>
-                    <textarea type='text' name='reason' id='reason-field' className='mdc-text-field__input' onChange={this.handleChange.bind(this)} rows={5} required />
-                    <label className='mdc-floating-label' htmlFor='reason-field'>Who are you?</label>
-                    <div className='mdc-line-ripple' />
-                </div>
+                <TextArea name='reason' label='Who are you?' onChange={this.handleChange.bind(this)} rows={5} style={{ width: '100%' }} required />
 
-                <button className='mdc-typography--headline6 mdc-button mdc-button--raised' data-mdc-auto-init='MDCRipple' style={{ float: 'right' }}>Submit</button>
+                <Button style={{ float: 'right' }}>
+                    <Text type='headline6'>Submit</Text>
+                </Button>
             </form>
         );
     }

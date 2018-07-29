@@ -1,10 +1,9 @@
-import _ from 'lodash';
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { MDCAutoInit } from 'candidatexyz-common-js/lib/elements';
 
 import { setInvertedNavbar, setFloatingNavbar } from '../actions/global-actions';
-import MDCAutoInit from '../components/common/MDCAutoInit';
 
 class Privacy extends React.Component {
 

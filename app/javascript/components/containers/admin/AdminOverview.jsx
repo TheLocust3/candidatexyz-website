@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
 import { connect } from 'react-redux';
+import { MDCAutoInit } from 'candidatexyz-common-js/lib/elements';
 
 import { history } from '../../../constants';
 import { setInvertedNavbar, setFloatingNavbar } from '../../actions/global-actions';
 import { fetchAllSignUps } from '../../actions/sign-up-actions';
 import AuthApi from '../../../api/auth-api';
-import MDCAutoInit from '../../components/common/MDCAutoInit';
 
 import SignUpsList from '../../components/admin/SignUpsList';
 

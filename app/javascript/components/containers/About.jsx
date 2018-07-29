@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { MDCAutoInit } from 'candidatexyz-common-js/lib/elements';
 
 import { setInvertedNavbar, setFloatingNavbar } from '../actions/global-actions';
-import MDCAutoInit from '../components/common/MDCAutoInit';
 
 class About extends React.Component {
 
