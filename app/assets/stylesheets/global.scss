@@ -15,6 +15,10 @@ body {
     margin-bottom: 7.5vh;
     margin-left: 5%;
     margin-right: 5%;
+
+    @media (max-width: $mobile-width) {
+        margin-top: 10%;
+    }
 }
 
 .content-15 {
@@ -29,6 +33,18 @@ body {
     color: black;
 }
 
+.desktop-middle {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    @media (max-width: $mobile-width) {
+        position: relative;
+        top: initial;
+        transform: none;
+    }
+}
+
 .splitscreen1 {
     display: inline-block;
     width: 48%;
@@ -36,6 +52,8 @@ body {
 
     @media (max-width: $mobile-width) {
         width: 100%;
+
+        margin-top: 2%;
     }
 }
 

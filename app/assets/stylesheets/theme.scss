@@ -1,3 +1,5 @@
+@import 'global';
+
 $purple-primary: #470a66;
 $purple-highlight: #590c7f;
 $mdc-theme-primary: $purple-primary;
@@ -19,6 +21,27 @@ $mdc-theme-primary: $purple-primary;
 .mdc-typography--headline1, .mdc-typography--headline2, .mdc-typography--headline3, .mdc-typography--headline4,
 .mdc-typography--headline5, .mdc-typography--headline6, .mdc-typography--body1, .mdc-typography--body2 {
     font-weight: 300;
+}
+
+.mdc-typography--headline1 {
+    @media (max-width: $mobile-width) {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+}
+
+.mdc-typography--headline2 {
+    @media (max-width: $mobile-width) {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+}
+
+.mdc-typography--headline3 {
+    @media (max-width: $mobile-width) {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
 }
 
 @import '@material/theme/mdc-theme';
