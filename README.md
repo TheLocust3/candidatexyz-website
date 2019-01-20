@@ -1,6 +1,7 @@
 # candidateXYZ Website
 
-The [candidateXYZ](https://candidatexyz.com) website.
+The [candidateXYZ](https://candidatexyz.com) website.  
+Check out the story [here](https://jakekinsella.com/projects/candidatexyz).
 
 ## Running
 
